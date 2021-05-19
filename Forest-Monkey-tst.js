@@ -812,7 +812,8 @@ class V3{
         return new V3(this.x,this.y,this.z);
     }
     project(v){
-    	return v.copy().scaleTo(this.dot(v.normalized()));
+		if(v.length==0)return this;
+		return v.copy().scaleTo(this.dot(v.normalized()));
     }
     add(v){
         v=[].slice.call(arguments);
