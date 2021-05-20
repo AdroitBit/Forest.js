@@ -301,7 +301,7 @@ if(!Array.of)(function(a,b,i){
 		return this.toLowerCase();
 	},upper:function(){
 		return this.toUpperCase();
-	},lastArr:function(){
+	},last:function(){
 		return this.slice(-1)[0];
 	},charCode:function(){
 		return this.toA().map(function(i){
@@ -403,7 +403,7 @@ if(!Array.of)(function(a,b,i){
 		return this[rand(this.length)|0];
 	},function(a){
 		this[rand(this.length)|0]=a;
-	}],lastArr:[function(){return this.slice(-1)[0];},function(a){this[this.length-1]=a;}]
+	}],last:[function(){return this.slice(-1)[0];},function(a){this[this.length-1]=a;}]
 });['Map'].concat('Uint8 Int8 Uint8Clamped Int16 Uint16 Int32 Uint32 Float32 Float64'.asEvtN).each(function(i){
 	if(i=window[i+"Array"])['toArray','each','toA'].each(function(a){
 		i.prototype[a]=Array.prototype[a];
