@@ -657,6 +657,10 @@ class V2{
         }
         else{this.x=x;this.y=y;}
     }
+	*[Symbol.iterator]() {
+		yield this.x;
+		yield this.y;
+	}
     dot(v){
         return this.x*v.x+this.y*v.y;
     }
@@ -768,6 +772,11 @@ class V3{
         }
         else{this.x=x;this.y=y;this.z=z;}
     }
+	*[Symbol.iterator]() {
+		yield this.x;
+		yield this.y;
+		yield this.z;
+	}
     dot(v){
         return this.x*v.x+this.y*v.y+this.z*v.z;
     }
